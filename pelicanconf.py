@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'Oscar Triano "dotoscat"'
+AUTHOR = "Oscar Triano 'dotoscat'"
 SITENAME = 'cat dotoscat.log'
 SITEURL = ''
 
@@ -27,7 +27,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+          ('Follow me on twitter \'@cat_dotoscat\'', 'https://twitter.com/cat_dotoscat'),)
 
 DEFAULT_PAGINATION = 3
 
