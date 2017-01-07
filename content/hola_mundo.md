@@ -3,13 +3,13 @@ Date: 2016-08-21 20:18
 Category: Python
 Tags: pelican, publishing
 Slug: hello-world
-Lang: en
+Lang: es
 Authors: Oscar Triano 'dotoscat'
 Summary: Hello world
 
 Hello world!
 ############
 
-I say hello to the world
+Digo hola al mundo
 
 *Applause*

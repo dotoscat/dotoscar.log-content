@@ -1,4 +1,6 @@
 Title: About me
+Slug: about-me
+Lang: en
 
 I am Oscar Triano 'dotoscat' and I am
 `new Date().getYear() - new Date(1987,  10, 5).getYear()` years old
