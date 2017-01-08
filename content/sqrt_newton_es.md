@@ -6,9 +6,9 @@ Slug: sqrt-newton
 Lang: es
 Authors: Oscar Triano 'dotoscat'
 
-Let's make our version of sqrt using the [Newton's method](https://en.wikipedia.org/wiki/Newton%27s_method#Square_root_of_a_number)
+Vamos hacer nuestra propia version de la raíz cuadrada usando el [método de Newton](https://es.wikipedia.org/wiki/M%C3%A9todo_de_Newton)
 
-Let's use two ways: One is procedural, the other one is functional
+Vamos a usar dos formas: Una es procedural, el otro es funcional
 
 ##Procedural
 
@@ -22,15 +22,15 @@ Let's use two ways: One is procedural, the other one is functional
 			     return z
 		    last_z = z
 
-Sure that this is a straightforward way to solve a problem. You'll see the number the number
-0.001. This number is a way to assure that the program will return z if z is more or less close to 0.
-As note: In imperative programming there are states, and if there are states then there are mutable data.
+Seguro que  esta es una forma directa de resolver un problema. Verás el número 0.001.
+Este número es una forma de asegurar que el programa devolverá z si z está mas o menos cerca de 0.
+Como nota: En la programación procedural hay estado, y si hay estados entonces hay datos mutables.
 
     :::python
     sqrt_newton_rec(9.0)
     3.000000001396984
 
-##Functional
+##Funcional
 
     #!python
     def sqrt_newton_rec(x, z=1.0, last_z=None):
@@ -39,10 +39,8 @@ As note: In imperative programming there are states, and if there are states the
     		return z
     	return sqrt_newton_rec(x, z - ((z*z - x)/(2.0*z)), z)
 
-From here things are a bit tricky. No loops. Only recursive calls. And no states,
-only we will pass results to the next function call.
-Did you see the line 2? Without this line the recursive function is equivalent to
-this function
+Desde aquí las cosas son un poco complicadas. No hay bucles. Solamante llamadas recursivas. Y no hay estados, solamente pasamos los resultados a la siguiente llamada de la función.
+¿Viste la línea 2? Si esa línea la función recursiva es equivalente a esta función 
 
     #!python
     def sqrt_newton(x):
@@ -54,18 +52,20 @@ this function
 	    if last_z is not None and last_z - z < 0.001:
 		    return z
 
-last_z = z is assigned after the assignation to z, giving wrong results.
+last_z = z es asignado después de la asignación a z, dando resultados equivocados.
 
-How do we start this? An example
+¿Cómo empezamos esto? Un ejemplo
 
     :::python
     sqrt_newton_rec(9.0)
     3.000000001396984
 
-Now the benchmarks, which is faster? Python has some nice profiles modules.
-Let's use the module timeit. This module is for small pieces of code.
+##Comparaciones
 
-99*99 is 9801, and the square root of 9801 is 99
+Ahora las Comparaciones, ¿cuál es rápido? Python tiene algunos modulos para medir el tiempo de ejecución
+Vamos a usar el módulo timeit. Este módulo es para trozos de código.
+
+99*99 is 9801, y la raíz cuadrada de 9801 es 99
 
     :::python
     import timeit
@@ -76,7 +76,7 @@ Let's use the module timeit. This module is for small pieces of code.
     timeit.repeat('sqrt_newton(99*99)', globals=globals())
     [4.547379188610648, 4.452797279736842, 4.643888148973929]
 
-The time for the recursive fuction is around 5.6 secs, and for the procedural function
-around 4.5 secs. The recusive function is 1.2 slower than the normal function.
+El tiempo para la función recursiva es de unos 5.6 segundos, y para la función procedural sobre 4.5 segundos.
+La función recursiva es 1.2 más lenta que la otra función.
 
-And that's all, for the moment :)
+Y eso es todo, por el momento :)
