@@ -22,12 +22,12 @@ Vamos a usar dos formas: Una es procedural, el otro es funcional
 			     return z
 		    last_z = z
 
-Seguro que  esta es una forma directa de resolver un problema. Verás el número 0.001.
+Seguro que esta es una forma directa de resolver un problema. Verás el número 0.001.
 Este número es una forma de asegurar que el programa devolverá z si z está mas o menos cerca de 0.
-Como nota: En la programación procedural hay estado, y si hay estados entonces hay datos mutables.
+Como nota: En la programación procedural hay estados, y si hay estados entonces hay datos mutables.
 
     :::python
-    sqrt_newton_rec(9.0)
+    sqrt_newton(9.0)
     3.000000001396984
 
 ##Funcional
@@ -40,7 +40,7 @@ Como nota: En la programación procedural hay estado, y si hay estados entonces 
     	return sqrt_newton_rec(x, z - ((z*z - x)/(2.0*z)), z)
 
 Desde aquí las cosas son un poco complicadas. No hay bucles. Solamante llamadas recursivas. Y no hay estados, solamente pasamos los resultados a la siguiente llamada de la función.
-¿Viste la línea 2? Si esa línea la función recursiva es equivalente a esta función 
+¿Viste la línea 2? Si esa línea la función recursiva es equivalente a esta función
 
     #!python
     def sqrt_newton(x):
