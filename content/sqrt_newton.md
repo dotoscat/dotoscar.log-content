@@ -27,7 +27,7 @@ Sure that this is a straightforward way to solve a problem. You'll see the numbe
 As note: In procedural programming there are states, and if there are states then there are mutable data.
 
     :::python
-    sqrt_newton_rec(9.0)
+    sqrt_newton(9.0)
     3.000000001396984
 
 ##Functional
