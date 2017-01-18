@@ -64,7 +64,7 @@ How do we start this? An example
 
 ##Benchmarks
 
-Now the benchmarks, which is faster? Python has some nice profiles modules.
+Now the benchmarks, which is faster? Python has some nice profile modules.
 Let's use the module timeit. This module is for small pieces of code.
 
 99*99 is 9801, and the square root of 9801 is 99
