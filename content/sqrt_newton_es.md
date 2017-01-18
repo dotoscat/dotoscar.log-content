@@ -44,13 +44,13 @@ Desde aquí las cosas son un poco complicadas. No hay bucles. Solamante llamadas
 
     #!python
     def sqrt_newton(x):
-	z = 1.0
-	last_z = None
-	while True:
-        z = z - ((z*z - x)/(2.0*z))
-	    last_z = z
-	    if last_z is not None and last_z - z < 0.001:
-		    return z
+	    z = 1.0
+	    last_z = None
+        while True:
+            z = z - ((z*z - x)/(2.0*z))
+	        last_z = z
+	        if last_z is not None and last_z - z < 0.001:
+		        return z
 
 last_z = z es asignado después de la asignación a z, dando resultados equivocados.
 
