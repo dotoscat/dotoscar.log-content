@@ -62,14 +62,14 @@ if os.path.isfile(path):
     print('{} already exists, do you want to replace it?'.format(filename))
     answer = input('default \'No\' (No, Yes)> ')
     answer = answer.lower()
-    if len(answer) == 0 or answer[0] != 'yes':
+    if len(answer) == 0 or answer != 'yes':
         exit(3)
 
 content = open(path, 'w')
 for key in metadata:
     if metadata[key] is None: continue
     content.write('{}: {}\n'.format(key, metadata[key]))
-    
+
 content.write('\nWrite here your awesome content\n');
 content.close()
 print(path)
