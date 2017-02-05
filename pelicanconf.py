@@ -27,7 +27,10 @@ LINKS = ()
 # Social widget
 #('You can add links in your config file', '#'),
 SOCIAL = (
-          ('I have twitter \'@cat_dotoscat\'', 'https://twitter.com/cat_dotoscat'),)
+          ('My twitter \'@cat_dotoscat\'', 'https://twitter.com/cat_dotoscat'),
+          ('Checkout my github.com/dotoscat', 'https://github.com/dotoscat')
+    )
+
 
 DEFAULT_PAGINATION = 3
 
