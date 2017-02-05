@@ -7,3 +7,5 @@ I am Oscar Triano 'dotoscat' and I am
 
 I am curious and I like to learn new things. I believe that programming must be fun.
 I write code for humans beings. Machines are our slaves...
+
+You can see what am I working on [here](https://github.com/dotoscat).

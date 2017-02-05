@@ -8,3 +8,5 @@ Soy Oscar Triano 'dotoscat' y tengo
 
 Soy curioso y me gusta aprender cosas nuevas. Creo que la programación debe ser divertida.
 Escribo código para seres humanos. Las máquinas son nuestras esclavas...
+
+Puedes ver en qué estoy trabajando [aquí](https://github.com/dotoscat).
