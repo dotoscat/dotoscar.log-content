@@ -22,7 +22,7 @@ Let's use two ways: One is procedural, the other one is functional
 			     return z
 		    last_z = z
 
-Sure that this is a straightforward way to solve a problem. You'll see the number the number
+Sure that this is a straightforward way to solve a problem. You'll see the number
 0.001. This number is a way to assure that the program will return z if z is more or less close to 0.
 As note: In procedural programming there are states, and if there are states then there are mutable data.
 
