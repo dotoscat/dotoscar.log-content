@@ -62,7 +62,7 @@ if os.path.isfile(path):
     print('{} already exists, do you want to replace it?'.format(filename))
     answer = input('default \'No\' (No, Yes)> ')
     answer = answer.lower()
-    if len(answer) == 0 or answer[0] == 'n':
+    if len(answer) == 0 or answer[0] != 'yes':
         exit(3)
 
 content = open(path, 'w')
