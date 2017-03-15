@@ -35,7 +35,7 @@ def get_today_value():
 print("Let's create content for your blog")
 for tag in metadata:
     if tag == "Date":
-        value = input(tag + " (yyyy-mm-dd): ")
+        value = input(tag + " (yyyy-mm-dd)[now time]: ")
         if len(value) == 0:
             value = get_today_value()
     else:
