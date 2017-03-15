@@ -36,10 +36,10 @@ print("Let's create content for your blog")
 for tag in metadata:
     if tag == "Date":
         value = input(tag + " (yyyy-mm-dd): ")
+        if len(value) == 0:
+            value = get_today_value()
     else:
         value = input(tag + ' ')
-    if tag == "Date" and len(value) == 0:
-        value = get_today_value()
     metadata[tag] = value if len(value) > 0 else None
 
 if metadata['Title'] is None:
