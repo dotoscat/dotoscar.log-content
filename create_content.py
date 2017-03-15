@@ -15,6 +15,7 @@ This is the content of my super blog post.
 '''
 import datetime
 import os.path
+from pelicanconf import DEFAULT_LANG
 
 metadata = {
     'Title': None,
@@ -47,7 +48,7 @@ if metadata['Title'] is None:
     exit(1)
 
 title = metadata['Title']
-lang = '_'+metadata['Lang'] if metadata['Lang'] is not None else ''
+lang = '_'+metadata['Lang'] if metadata['Lang'] is not None else '_'+DEFAULT_LANG
 filename = title.replace(' ','_') + lang + ".md"
 
 print('where do I put this file (relative path or return for \'.\')?')
