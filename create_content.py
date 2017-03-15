@@ -48,8 +48,8 @@ if metadata['Title'] is None:
     exit(1)
 
 title = metadata['Title']
-lang = '_'+metadata['Lang'] if metadata['Lang'] is not None else '_'+DEFAULT_LANG
-filename = title.replace(' ','_') + lang + ".md"
+lang = '-'+metadata['Lang'] if metadata['Lang'] is not None else '-'+DEFAULT_LANG
+filename = title.replace(' ','-') + lang + ".md"
 
 print('where do I put this file (relative path or return for \'.\')?')
 folder = input('> ')
