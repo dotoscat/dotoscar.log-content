@@ -15,7 +15,7 @@ This is the content of my super blog post.
 '''
 import datetime
 import os.path
-from pelicanconf import DEFAULT_LANG
+from pelicanconf import DEFAULT_LANG, PATH
 
 metadata = {
     'Title': None,
@@ -56,8 +56,9 @@ lang = '-'+metadata['Lang'] if metadata['Lang'] is not None else '-'+DEFAULT_LAN
 slug = metadata['Slug'] if metadata['Slug'] is not None else title_hyphen
 filename = title_hyphen + lang + ".md"
 
-print('where do I put this file (relative path or return for \'.\')?')
+print('where do I put this file (relative path or return for \'{}\')?'.format(PATH))
 folder = input('> ')
+folder = PATH if not folder else folder
 folder = os.path.join(os.path.abspath('.'), folder)
 folder = os.path.normpath(folder)
 if not os.path.isdir(folder):
