@@ -34,17 +34,17 @@ def get_today_value():
     return now.isoformat()
 
 print("Let's create content for your blog")
-for tag in metadata:
+for key in metadata:
     prompt = ' '
-    if tag == "Date":
-        value = input(tag + " (yyyy-mm-dd)[now time]: ")
+    if key == "Date":
+        value = input(key + " (yyyy-mm-dd)[now time]: ")
         if len(value) == 0:
             value = get_today_value()
         continue
-    elif tag == "Slug":
+    elif key == "Slug":
         prompt = ', common name for translations: '
-    value = input(tag + prompt)
-    metadata[tag] = value if len(value) > 0 else None
+    value = input(key + prompt)
+    metadata[key] = value if len(value) > 0 else None
 
 if metadata['Title'] is None:
     print('Give a title at least')
@@ -53,7 +53,7 @@ if metadata['Title'] is None:
 title = metadata['Title']
 title_hyphen = title.replace(' ','-')
 lang = '-'+metadata['Lang'] if metadata['Lang'] is not None else '-'+DEFAULT_LANG
-slug = metadata['Slug'] if metadata['Slug'] is not None else ''
+slug = metadata['Slug'] if metadata['Slug'] is not None else title_hyphen
 filename = title_hyphen + lang + ".md"
 
 print('where do I put this file (relative path or return for \'.\')?')
