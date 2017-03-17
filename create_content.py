@@ -35,12 +35,15 @@ def get_today_value():
 
 print("Let's create content for your blog")
 for tag in metadata:
+    prompt = ' '
     if tag == "Date":
         value = input(tag + " (yyyy-mm-dd)[now time]: ")
         if len(value) == 0:
             value = get_today_value()
-    else:
-        value = input(tag + ' ')
+        continue
+    elif tag == "Slug":
+        prompt = ', common name for translations: '
+    value = input(tag + prompt)
     metadata[tag] = value if len(value) > 0 else None
 
 if metadata['Title'] is None:
@@ -48,8 +51,10 @@ if metadata['Title'] is None:
     exit(1)
 
 title = metadata['Title']
+title_hyphen = title.replace(' ','-')
 lang = '-'+metadata['Lang'] if metadata['Lang'] is not None else '-'+DEFAULT_LANG
-filename = title.replace(' ','-') + lang + ".md"
+slug = metadata['Slug'] if metadata['Slug'] is not None else ''
+filename = title_hyphen + lang + ".md"
 
 print('where do I put this file (relative path or return for \'.\')?')
 folder = input('> ')
