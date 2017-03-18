@@ -35,11 +35,12 @@ def get_today_value():
 
 print("Let's create content for your blog")
 for key in metadata:
-    prompt = ' '
+    prompt = ': '
     if key == "Date":
         value = input(key + " (yyyy-mm-dd)[now time]: ")
-        if len(value) == 0:
+        if not value:
             value = get_today_value()
+            metadata[key] = value 
         continue
     elif key == "Slug":
         prompt = ', common name for translations: '
