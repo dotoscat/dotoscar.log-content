@@ -51,7 +51,7 @@ want to distribute and be used effortless by our users in Windows.
 
 `cxfreeze hello.py`
 
-This will create an *main.exe* on *dist* folder (it will created for us).
+This will create an *hello.exe* on *dist* folder (it will created for us).
 
     :::shell
     > cd dist
