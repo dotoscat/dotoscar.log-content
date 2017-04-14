@@ -3,7 +3,7 @@ Date: 2017-04-14
 Category: Python
 Tags: python, development
 Authors: Oscar Triano 'dotoscat'
-Slug: en
+Slug: intro-cxFreeze
 Lang: en
 
 cx_Freeze is a set of utilities that help us build a Python executable.
