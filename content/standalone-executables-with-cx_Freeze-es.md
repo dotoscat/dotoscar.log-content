@@ -7,7 +7,7 @@ Slug: intro-cxFreeze
 Lang: es
 
 cx_Freeze es un conjunto de utilidades que nos ayuda a construir un ejecutable de Python.
-Esto es idea para distribuir aplicaciones de Python para usuarios finales, especialmente usuarios de Windows, sin preocuparse que tengan instalado un entorno de Python.
+Esto es ideal para distribuir aplicaciones de Python para usuarios finales, especialmente usuarios de Windows, sin preocuparse que tengan instalado un entorno de Python.
 
 La instalación de cx_Freeze es simple
 
