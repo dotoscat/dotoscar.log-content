@@ -80,7 +80,7 @@ content = open(path, 'w')
 for key in metadata:
     if metadata[key] is None: continue
     if key == 'title':
-        write_title(content, metadata[key])
+        write_header(content, metadata[key])
     else:
         content.write('{}: {}\n'.format(key, metadata[key]))
 
