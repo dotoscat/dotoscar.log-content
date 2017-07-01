@@ -29,9 +29,9 @@ metadata = {
     'summary': None
 }
 
-def write_header(content, content, header_char='#'):
-    content.write(content+'\n')
-    content.write(header_char*len(content)+'\n\n')
+def write_header(content, name, header_char='#'):
+    content.write(name+'\n')
+    content.write(header_char*len(name)+'\n\n')
 
 def get_today_value():
     now = datetime.date.today()
