@@ -8,7 +8,7 @@ slug: oop-done-right
 authors: Oscar Triano 'dotoscat'
 lang: es
 
-Se tiene entendido que la programación orientado a objetos es para representar
+Se tiene entendido que la programación orientado a objetos (POO) es para representar
 objetos de un mundo. Son un conjunto de atributos, o datos, más funciones, o métodos,
 que manejan todo el conjunto. Los objetos se pasan mensajes entre sí para comunicarse
 que son a través de esos métodos.
@@ -85,7 +85,6 @@ Además, los getters y los setters dan más control en la manipulación del obje
 
 En una persona nos interesa saber su nombre, cambiar su nombre, su nacimiendo y la
 edad que tiene. Vamos a ello. Se va a relajar en cómo se van a llamar los setters y getters.
-Con esto...
 
 .. code-block:: python
 
@@ -97,7 +96,7 @@ Con esto...
             self._nacimiento = time()
             
         def poner_nombre(self, nombre):
-            if not len(nombre): raise Exception("Pone un nombre a {}".format(self))
+            if not len(nombre): raise Exception("Ponle un nombre a la nueva persona".format(self))
             self._nombre = nombre
             
         def obtener_nombre(self):
@@ -107,7 +106,51 @@ Con esto...
             return self._nacimiento
             
         def obtener_edad(self):
-            return time() - self._time
+            return time() - self._nacimiento
     
     persona = Persona("Oscar")
-    print(persona.get_nombre())
+    print(persona.obtener_nombre())
+    print(persona.obtener_nacimiento())
+    persona.poner_nombre("Ruben")
+    print(persona.obtener_nombre())
+    print(persona.obtener_edad())
+
+Ya con esto se cumple una de las características de la programación orientado a objetos
+que es la encapsulación. Se puede controlar mejor gracias a los métodos
+la manipulación del objeto.
+
+¿Sería posible tener la simplicidad de acceso de los atributos públicos y
+tener el control de los métodos que lo manipulan, todo a la vez? Sí, son
+las propiedades. Una propiedad es un atributo que es tratado especialmente
+por un método getter o setter. En Python se hace con el decorador @property.
+
+.. code-block:: python
+
+    from time import time
+
+    class Persona:
+        def __init__(self, nombre):
+            self._nacimiento = time()
+            self.nombre = nombre
+            
+        @property
+        def nombre(self):
+            """No dejes el nombre vacío que peto"""
+            return self._nombre
+            
+        @nombre.setter
+        def nombre(self, nombre):
+            if not isinstance(nombre, str) or not len(nombre):
+                raise Exception("Ponle un nombre a la nueva persona")
+            self._nombre = nombre
+            
+        @property
+        def nacimiento(self):
+            return self._nacimiento
+            
+        @property
+        def edad(self):
+            return time() - self._nacimiento
+
+En la POO es mejor ver un objeto como un saco de métodos
+o propiedades y no como un saco de atributos y funciones que lo manejan. 
