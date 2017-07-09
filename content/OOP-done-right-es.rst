@@ -1,7 +1,7 @@
 POO hecho bien
 ##############
 
-date: 2017-07-01
+date: 2017-07-09
 category: Python
 tags: python, OOP
 slug: oop-done-right
@@ -151,6 +151,19 @@ por un método getter o setter. En Python se hace con el decorador @property.
         @property
         def edad(self):
             return time() - self._nacimiento
+
+    persona = Persona("Oscar")
+    print(persona.nombre) # Oscar
+    persona.nombre = "" # "Exception: Ponle un nombre a la nueva persona"
+    persona.nombre = "Alba"
+    persona.nacimiento = 43454 # "AttributeError: can't set attribute"
+    print(persona.nacimiento) # Un numero
+    print(persona.edad) # Otro número
+
+Una propiedad puede ser útil para calcular un atributo derivado de un
+objeto sacado de un diagrama de entidad-relación. Si se quiere manipular 
+el objeto con métodos que requieren más de un
+parámetro se pueden implementar junto a las propiedades.
 
 En la POO es mejor ver un objeto como un saco de métodos
 o propiedades y no como un saco de atributos y funciones que lo manejan. 
