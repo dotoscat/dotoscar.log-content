@@ -1,19 +1,19 @@
 POO hecho bien
 ##############
 
-date: 2017-07-09
-category: Python
-tags: python, OOP
-slug: oop-done-right
-authors: Oscar Triano 'dotoscat'
-lang: es
+:date: 2017-07-09
+:category: Python
+:tags: python, OOP
+:slug: oop-done-right
+:authors: Oscar Triano 'dotoscat'
+:lang: es
 
 Se tiene entendido que la programación orientado a objetos (POO) es para representar
 objetos de un mundo. Son un conjunto de atributos, o datos, más funciones, o métodos,
 que manejan todo el conjunto. Los objetos se pasan mensajes entre sí para comunicarse
 que son a través de esos métodos.
 
-En Python todo es un objeto (isinstance(3, int) es una prueba de ello), hasta las mismas
+En Python **todo es un objeto** (*isinstance(3, int)* es una prueba de ello), hasta las mismas
 clases. Una clase es como una plantilla de cómo será construido un objeto.
 
 Vamos a crear la típica clase de una persona. Tendrá un nombre,
@@ -46,13 +46,15 @@ Una primera aproximación sería esta:
     print(persona.get_nombre())
 
 Aquí nuestro objeto. Es válido tratar nuestro objeto como una simple estructura
-de datos pero la idea es programar orientado a objetos. El acceso a los atributos
+de datos pero **la idea es programar orientado a objetos**. El acceso a los atributos
 es fácil, y con los despistes cuando el código esté funcionando dará sorpresas.
-Los métodos definidos, getters y setters, son redundantes.
+Los métodos definidos, getters y setters, son redundantes porque los atributos
+se acceden fácilmente.
 
 No queremos que los atributos se manipulen así de fácil. En Python todos
 los atributos son públicos y para indicar que no se deben tocar se le pone '_' delante
-del nombre del atributo como convención para indicar que son privados.
+del nombre del atributo como `convención <https://www.python.org/dev/peps/pep-0008/#designing-for-inheritance>`_
+para indicar que son privados.
 
 Con esto quedaría ahora así
 
@@ -79,9 +81,9 @@ Con esto quedaría ahora así
     persona._edad = 1000
     print(persona.get_nombre())
 
-NO se deben tocar los atributos si se indican, así que a partir de ahora
+**NO se deben tocar los atributos si se indican**, así que a partir de ahora
 no se va a manipular directamente los atributos. Ahora los getters y los setters son más necesarios que nunca.
-Además, los getters y los setters dan más control en la manipulación del objeto.
+Además, **los getters y los setters (que son métodos) dan más control en la manipulación del objeto**.
 
 En una persona nos interesa saber su nombre, cambiar su nombre, su nacimiendo y la
 edad que tiene. Vamos a ello. Se va a relajar en cómo se van a llamar los setters y getters.
