@@ -18,15 +18,15 @@ import os.path
 from pelicanconf import DEFAULT_LANG, PATH
 
 metadata = {
-    'title': None,
-    'date': None,
-    'modified': None,
-    'category': None,
-    'tags': None,
-    'slug': None,
-    'authors': None,
-    'lang': None,
-    'summary': None
+    ':title:': None,
+    ':date:': None,
+    ':modified:': None,
+    ':category:': None,
+    ':tags:': None,
+    ':slug:': None,
+    ':authors:': None,
+    ':lang:': None,
+    ':summary:': None
 }
 
 def write_header(content, name, header_char='#'):
