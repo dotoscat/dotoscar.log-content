@@ -1,7 +1,7 @@
 POO hecho bien
 ##############
 
-:date: 2017-07-09
+:date: 2017-07-10
 :category: Python
 :tags: python, OOP
 :slug: oop-done-right
@@ -54,7 +54,7 @@ se acceden fácilmente.
 No queremos que los atributos se manipulen así de fácil. En Python todos
 los atributos son públicos y para indicar que no se deben tocar se le pone '_' delante
 del nombre del atributo como `convención <https://www.python.org/dev/peps/pep-0008/#designing-for-inheritance>`_
-para indicar que son privados.
+para **indicar que son privados**.
 
 Con esto quedaría ahora así
 
@@ -86,7 +86,8 @@ no se va a manipular directamente los atributos. Ahora los getters y los setters
 Además, **los getters y los setters (que son métodos) dan más control en la manipulación del objeto**.
 
 En una persona nos interesa saber su nombre, cambiar su nombre, su nacimiendo y la
-edad que tiene. Vamos a ello. Se va a relajar en cómo se van a llamar los setters y getters.
+edad que tiene. Vamos a ello. Se va a relajar en cómo se van a llamar los setters y getters,
+se van a cambiar a *poner_* y *obtener_* respectivamente.
 
 .. code-block:: python
 
@@ -98,7 +99,7 @@ edad que tiene. Vamos a ello. Se va a relajar en cómo se van a llamar los sette
             self._nacimiento = time()
             
         def poner_nombre(self, nombre):
-            if not len(nombre): raise Exception("Ponle un nombre a la nueva persona".format(self))
+            if not len(nombre): raise Exception("Ponle un nombre a la nueva persona")
             self._nombre = nombre
             
         def obtener_nombre(self):
@@ -117,14 +118,16 @@ edad que tiene. Vamos a ello. Se va a relajar en cómo se van a llamar los sette
     print(persona.obtener_nombre())
     print(persona.obtener_edad())
 
-Ya con esto se cumple una de las características de la programación orientado a objetos
-que es la encapsulación. Se puede controlar mejor gracias a los métodos
-la manipulación del objeto.
+Ya con esto **se cumple una de las características de la programación orientado a objetos
+que es la encapsulación**. Se puede **controlar mejor gracias a los métodos**
+la manipulación del objeto. No dejar poner un nombre vacío o calcular
+la edad directamente a partir de su nacimiento se puede hacer gracias
+a la manipulación de un objeto con métodos.
 
 ¿Sería posible tener la simplicidad de acceso de los atributos públicos y
 tener el control de los métodos que lo manipulan, todo a la vez? Sí, son
-las propiedades. Una propiedad es un atributo que es tratado especialmente
-por un método getter o setter. En Python se hace con el decorador @property.
+las **propiedades**. Una propiedad es un atributo que es tratado especialmente
+por un método getter o setter. En Python se hace con el decorador *@property*.
 
 .. code-block:: python
 
@@ -165,7 +168,7 @@ por un método getter o setter. En Python se hace con el decorador @property.
 Una propiedad puede ser útil para calcular un atributo derivado de un
 objeto sacado de un diagrama de entidad-relación. Si se quiere manipular 
 el objeto con métodos que requieren más de un
-parámetro se pueden implementar junto a las propiedades.
+parámetro **se pueden implementar junto a las propiedades**.
 
-En la POO es mejor ver un objeto como un saco de métodos
-o propiedades y no como un saco de atributos y funciones que lo manejan. 
+En la POO es mejor **ver un objeto como un saco de métodos
+o propiedades** y no como un saco de atributos y funciones que lo manejan. 
