@@ -6,6 +6,8 @@ AUTHOR = "Oscar Triano 'dotoscat'"
 SITENAME = 'cat dotoscat.log'
 SITEURL = 'https://dotoscat.github.io'
 
+THEME = "my-theme"
+
 PATH = 'content'
 
 TIMEZONE = 'Europe/Paris'
@@ -20,6 +22,8 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 #RELATIVE_URLS = True
+
+SHARE_BUTTONS = ('twitter', 'facebook', 'whatsapp', 'mail')
 
 # Blogroll
 # ('You can modify those links in your config file', '#')
