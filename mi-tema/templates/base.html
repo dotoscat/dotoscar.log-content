@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    </head>
+    <body>
+        <header>
+        <h1><a href="/">{{ SITENAME }}</a></h1>
+        <nav>
+            <ul>
+                {% for page in pages %}
+                    <li><a href="/{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor %}
+                {% for categoria, null in categories %}
+                    <li><a href="/{{ categoria.url }}">{{ categoria }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+        </header>
+        <main>
+        {% block contenido %}
+            <h1>¡Hola mundo! No olvides cambiar esto en la plantilla que hereda la plantilla base.</h1>
+        {% endblock %}
+        </main>
+        <footer>
+            <p>Este sitio es generado con <a href="https://docs.getpelican.com/en/stable/">Pelican.</a></p>
+        </footer>
+    </body>
+</html>
