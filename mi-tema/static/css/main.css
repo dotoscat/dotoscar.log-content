@@ -45,6 +45,11 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+header > h1 a {
+    text-decoration-line: none;
+    color: #222;
+}
+
 @media screen and (max-width: 60rem){
     main{
         margin: 1rem;
@@ -70,4 +75,9 @@ body {
     color: white;
     border: 1px solid #9f9fFF;
     border-radius: 0.25rem;
+}
+
+.activo {
+    background-color: #EEE;
+    color: #7777FE;
 }

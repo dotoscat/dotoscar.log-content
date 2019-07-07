@@ -16,11 +16,11 @@
         <h1 class="centrar"><a href="/">{{ SITENAME }}</a></h1>
         <nav>
             <ul>
-                {% for page in pages %}
-                    <li><a class="boton" href="/{{ page.url }}">{{ page.title }}</a></li>
+                {% for apage in pages %}
+                    <li><a class="boton {% if page == apage%}activo{% endif %}" href="/{{ apage.url }}">{{ apage.title }}</a></li>
                 {% endfor %}
-                {% for categoria, null in categories %}
-                    <li><a class="boton" href="/{{ categoria.url }}">{{ categoria }}</a></li>
+                {% for acategoria, null in categories %}
+                    <li><a class="boton {% if category == acategoria%}activo{% endif %}" href="/{{ acategoria.url }}" href="/{{ acategoria.url }}">{{ acategoria }}</a></li>
                 {% endfor %}
             </ul>
         </nav>
