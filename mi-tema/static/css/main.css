@@ -11,7 +11,8 @@ nav ul{
 }
 
 nav ul li{
-    white-space: nowrap;
+    flex-basis: auto;
+    padding: 0.5rem;
 }
 
 article p, main p {
@@ -63,10 +64,10 @@ body {
 }
 
 .boton {
+    padding: 0.5rem;
+    white-space: nowrap;
     background-color: #7777FE;
-    height: 100%;
     color: white;
     border: 1px solid #9f9fFF;
-    padding: 0.5rem;
     border-radius: 0.25rem;
 }
