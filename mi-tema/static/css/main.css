@@ -3,14 +3,6 @@ html {
     overflow-y: hidden;
 }
 
-main, body {
-    height: 100%;
-}
-
-body{
-    background-color: #CCCCFF;
-}
-
 nav ul{
     display: flex;
     flex-direction: row;
@@ -27,7 +19,11 @@ article p, main p {
 }
 
 main {
+    padding: 1rem;
+    background-color: #EEE;
     overflow-y: auto;
+    height: 100%;
+    align-items: stretch;
 }
 
 body {
@@ -35,7 +31,8 @@ body {
     flex: 1 1 0;
     flex-direction: column;
     color: #222;
-    background-color: #EEE;
+    height: 100%;
+    background-color: #CCF;
     line-height: 1.4rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -48,7 +45,7 @@ body {
 
 @media screen and (min-width: 60rem){
     main{
-        max-width: 60rem;
+        width: 60rem;
         margin-left: auto;
         margin-right: auto;
     }
