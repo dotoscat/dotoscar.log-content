@@ -17,10 +17,10 @@
         <nav>
             <ul>
                 {% for page in pages %}
-                    <li><a href="/{{ page.url }}">{{ page.title }}</a></li>
+                    <li><a class="boton" href="/{{ page.url }}">{{ page.title }}</a></li>
                 {% endfor %}
                 {% for categoria, null in categories %}
-                    <li><a href="/{{ categoria.url }}">{{ categoria }}</a></li>
+                    <li><a class="boton" href="/{{ categoria.url }}">{{ categoria }}</a></li>
                 {% endfor %}
             </ul>
         </nav>

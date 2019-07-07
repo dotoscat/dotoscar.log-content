@@ -5,13 +5,13 @@ html {
 
 nav ul{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    flex-direction: row;
     list-style: none;
 }
 
 nav ul li{
-    margin-right: 1rem;
+    white-space: nowrap;
 }
 
 article p, main p {
@@ -60,4 +60,13 @@ body {
 
 .centrar {
     text-align: center;
+}
+
+.boton {
+    background-color: #7777FE;
+    height: 100%;
+    color: white;
+    border: 1px solid #9f9fFF;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
 }
