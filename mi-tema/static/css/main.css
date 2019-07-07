@@ -21,9 +21,16 @@ article p, main p {
 main {
     padding: 1rem;
     background-color: #EEE;
-    overflow-y: auto;
+    overflow-y: hidden;
     height: 100%;
     align-items: stretch;
+    border-radius: 0.5rem;
+    border: 1px solid #7777FD;
+}
+
+main section {
+    height: 100%;
+    overflow-y: auto;
 }
 
 body {
