@@ -1,7 +1,23 @@
+nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li{
+    margin-right: 1rem;
+}
+
+article p, main p {
+    text-indent: 1rem;
+}
+
 body {
-    color: #333;
+    color: #222;
     background-color: #EEE;
     line-height: 1.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @media screen and (max-width: 60rem){
@@ -16,4 +32,8 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.centrar {
+    text-align: center;
 }

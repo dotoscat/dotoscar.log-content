@@ -4,10 +4,16 @@
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="{{ SITE_URL }}/{{ THEME_STATIC_DIR }}/css/main.css">
+        {% block meta %}
+        {% endblock %}
+        {% block estilos %}
+        {% endblock %}
+        {% block scripts %}
+        {% endblock %}
     </head>
     <body>
         <header>
-        <h1><a href="/">{{ SITENAME }}</a></h1>
+        <h1 class="centrar"><a href="/">{{ SITENAME }}</a></h1>
         <nav>
             <ul>
                 {% for page in pages %}
