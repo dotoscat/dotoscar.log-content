@@ -1,3 +1,16 @@
+html {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+main, body {
+    height: 100%;
+}
+
+body{
+    background-color: #CCCCFF;
+}
+
 nav ul{
     display: flex;
     flex-direction: row;
@@ -13,7 +26,14 @@ article p, main p {
     text-indent: 1rem;
 }
 
+main {
+    overflow-y: auto;
+}
+
 body {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
     color: #222;
     background-color: #EEE;
     line-height: 1.4rem;
@@ -21,13 +41,13 @@ body {
 }
 
 @media screen and (max-width: 60rem){
-    body{
+    main{
         margin: 1rem;
     }
 }
 
 @media screen and (min-width: 60rem){
-    body{
+    main{
         max-width: 60rem;
         margin-left: auto;
         margin-right: auto;
