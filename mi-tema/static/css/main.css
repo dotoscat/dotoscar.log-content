@@ -21,12 +21,24 @@ article p, main p {
 
 main {
     padding: 1rem;
-    background-color: #EEE;
+    background-color: white;
     overflow-y: hidden;
     height: 100%;
     align-items: stretch;
     border-radius: 0.5rem;
-    border: 1px solid #7777FD;
+    border: 1px solid #4d4dff;
+}
+
+main a {
+    color: #99f;
+}
+
+main a:active{
+    color: #9cf;
+}
+
+main a:visited{
+    color: #a64dff;
 }
 
 main section {
@@ -40,7 +52,7 @@ body {
     flex-direction: column;
     color: #222;
     height: 100%;
-    background-color: #CCF;
+    background-color: #99f;
     line-height: 1.4rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -71,13 +83,13 @@ header > h1 a {
 .boton {
     padding: 0.5rem;
     white-space: nowrap;
-    background-color: #7777FE;
+    background-color: #4d4dff;
     color: white;
-    border: 1px solid #9f9fFF;
+    border: 1px solid #e6e6ff;
     border-radius: 0.25rem;
 }
 
 .activo {
     background-color: #EEE;
-    color: #7777FE;
+    color: #99f;
 }
