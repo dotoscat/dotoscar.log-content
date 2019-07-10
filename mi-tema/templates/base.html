@@ -14,7 +14,7 @@
     <body>
         <header>
         <h1 class="centrar"><a href="/">{{ SITENAME }}</a></h1>
-        <nav>
+        <nav class="navegacion">
             <ul>
                 {% for apage in pages %}
                     <li><a class="boton {% if page == apage%}activo{% endif %}" href="/{{ apage.url }}">{{ apage.title }}</a></li>
@@ -22,7 +22,16 @@
                 {% for acategoria, null in categories %}
                     <li><a class="boton {% if category == acategoria%}activo{% endif %}" href="/{{ acategoria.url }}" href="/{{ acategoria.url }}">{{ acategoria }}</a></li>
                 {% endfor %}
+             {% if articles_paginator %}
+                <li class="flex-end" id="paginador">
+                <nav class="navegacion"><ul>
+                    <li><a class="boton" href="#">Anterior</a></li>
+                    <li><a class="boton" href="#">Siguiente</a></li>
+                </ul></nav>
+                </li>
+            {% endif %}
             </ul>
+
         </nav>
         </header>
         <main>
