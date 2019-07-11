@@ -2,7 +2,7 @@
 <li class="flex-end" id="paginador">
 <nav class="navegacion"><ul>
     {% if pagina_actual.has_previous() %}
-        <li><a class="boton" href="{{ pagina_anterior.url }}">Anterior</a></li>
+        <li><a class="boton" href="/{{ pagina_anterior.url }}">Anterior</a></li>
     {% else %}
         <li><a class="boton">Inicio</a></li>
     {% endif %}
@@ -13,7 +13,7 @@
         {% endif %}
         </li>
     {% if pagina_actual.has_next() %}
-        <li><a class="boton" href="{{ siguiente_pagina.url }}">Siguiente</a></li>
+        <li><a class="boton" href="/{{ siguiente_pagina.url }}">Siguiente</a></li>
     {% else %}
         <li><a class="boton">Fin</a></li>
     {% endif %}
