@@ -1,4 +1,8 @@
 {% extends 'base.html' %}
+{% import 'paginador.html' as paginador %}
+{% block paginador %}
+{{ paginador.crear_paginador(articles_page, articles_previous_page, articles_next_page) }}
+{% endblock %}
 {% block contenido %}
     <section id="articles">
         <ul>

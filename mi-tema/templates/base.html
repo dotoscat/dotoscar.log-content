@@ -22,30 +22,9 @@
                 {% for acategoria, null in categories %}
                     <li><a class="boton {% if category == acategoria%}activo{% endif %}" href="/{{ acategoria.url }}" href="/{{ acategoria.url }}">{{ acategoria }}</a></li>
                 {% endfor %}
-             {% if articles_paginator %}
-                <li class="flex-end" id="paginador">
-                <nav class="navegacion"><ul>
-                    {% if articles_page.has_previous() %}
-                        <li><a class="boton" href="{{ articles_previous_page.url }}">Anterior</a></li>
-                    {% else %}
-                        <li><a class="boton">Inicio</a></li>
-                    {% endif %}
-                        <li>{% if articles_page.number is number %}
-                            {{ articles_page.number }}
-                        {% else %}
-                            1
-                        {% endif %}
-                        </li>
-                    {% if articles_page.has_next() %}
-                        <li><a class="boton" href="{{ articles_next_page.url }}">Siguiente</a></li>
-                    {% else %}
-                        <li><a class="boton">Fin</a></li>
-                    {% endif %}
-                </ul></nav>
-                </li>
-            {% endif %}
+                {% block paginador %}
+                {% endblock %}
             </ul>
-
         </nav>
         </header>
         <main>
