@@ -25,8 +25,16 @@
              {% if articles_paginator %}
                 <li class="flex-end" id="paginador">
                 <nav class="navegacion"><ul>
-                    <li><a class="boton" href="#">Anterior</a></li>
-                    <li><a class="boton" href="#">Siguiente</a></li>
+                    {% if articles_page.has_previous() %}
+                        <li><a class="boton" href="{{ articles_previous_page.url }}">Anterior</a></li>
+                    {% else %}
+                        <li><a class="boton">Inicio</a></li>
+                    {% endif %}
+                    {% if articles_page.has_next() %}
+                        <li><a class="boton" href="{{ articles_next_page.url }}">Siguiente</a></li>
+                    {% else %}
+                        <li><a class="boton">Fin</a></li>
+                    {% endif %}
                 </ul></nav>
                 </li>
             {% endif %}

@@ -5,7 +5,7 @@
         {% for articulo in articles_page.object_list %}
             <article>
                 <header>
-                    <h3>{{ articulo.title }}</h3>
+                    <h3><a href="{{ articulo.url }}">{{ articulo.title }}</a></h3>
                     <ul>
                         <li><date>{{ articulo.date.date().isoformat() }}</date></li>
                         <li><a href="{{ articulo.category.url }}">{{ articulo.category }}</a></li>
