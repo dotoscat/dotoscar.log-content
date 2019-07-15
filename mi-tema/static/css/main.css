@@ -3,10 +3,12 @@ html {
     overflow-y: hidden;
 }
 
-.navegacion > ul {
-    margin: 0;
-    padding-left: 0;
+.navegacion{
     margin-bottom: 0.5rem;
+}
+
+.navegacion > ul {
+    padding-left: 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -21,6 +23,11 @@ html {
 
 .flex-end{
     margin-left: auto !important;
+}
+
+.flex-end > * {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 #paginador {
