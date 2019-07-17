@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% block scripts %}
+    {% if page.metadata.script is defined %}
+    <script src="/theme/js/{{ page.metadata.script }}"></script>
+    {% endif %}
+{% endblock %}
 {% block contenido %}
 <h2>{{ page.title }}</h2>
 {{ page.content }}

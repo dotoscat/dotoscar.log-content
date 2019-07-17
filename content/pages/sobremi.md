@@ -1,4 +1,8 @@
-title: Sobre mi
+title: Sobre mí
 date: 4/7/2019
+script: sobre-mi.js
 
-Hola mundo
+Me llamo Óscar Triano García <span id="nacimiento" data-fechanacimiento="1987">y tengo {} años.<span><noscript>y nací en el año 1987.<noscript>.
+<script>
+    'use strict';
+</script>
