@@ -12,6 +12,6 @@ El diseño fué inspirado en una serie de webs satíricas sobre diseño y desarr
 
 Para CSS no usa bootstrap. El CSS es ["artesano"](https://github.com/dotoscat/dotoscar.log-content/tree/master/mi-tema/static/css/main.css) que hace uso de tecnologías modernas como [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex). Tampoco hace uso de jQuery o cualquier otro framework de JavaScript. Usa ["vanilla JavaScript"](http://vanilla-js.com/) para mejorar la web, o hacer algo divertido, pero nunca para mostrar contenido. Con todo esto las plantillas no están saturadas con etiquetas div para el estilo, sino que [está estructurada de forma semántica con HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines) (esto es un artículo, esto es un cuerpo, esto es una sección, esto es una lista...).
 
-Primero empecé a estructurar las plantillas sin estilo y ver cómo se veían en un navegador. Ya después apliqué el estilo.
+Primero empecé a estructurar las plantillas sin estilo y verlos en un navegador. Ya después apliqué el estilo.
 
-Y por supuesto seguiré experimentando y mejorando este sitio.
+Por supuesto seguiré experimentando y mejorando este sitio.
