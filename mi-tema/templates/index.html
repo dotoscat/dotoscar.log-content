@@ -9,16 +9,16 @@
         {% for articulo in articles_page.object_list %}
             <article>
                 <header>
-                    <h3><a href="{{ articulo.url }}">{{ articulo.title }}</a></h3>
+                    <h3><a href="/{{ articulo.url }}">{{ articulo.title }}</a></h3>
                     <ul>
                         <li><date>{{ articulo.date.date().isoformat() }}</date></li>
-                        <li><a href="{{ articulo.category.url }}">{{ articulo.category }}</a></li>
+                        <li><a href="/{{ articulo.category.url }}">{{ articulo.category }}</a></li>
                     </ul>
                 </header>
                 <summary>
                     {{ articulo.summary }}
                 </summary>
-                <a href="{{ articulo.url }}">Leer más</a>
+                <a href="/{{ articulo.url }}">Leer más</a>
             </article>
         {% endfor %}
         </ul>

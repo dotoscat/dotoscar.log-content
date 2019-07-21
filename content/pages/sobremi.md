@@ -2,7 +2,7 @@ title: Sobre mí
 date: 4/7/2019
 script: sobre-mi.js
 
-Me llamo Óscar Triano García <span id="nacimiento" data-fechanacimiento="1987">y tengo (mmmm...) años<span><noscript>y nací en el año 1987 (usa JavaScript para calcular mi edad)</noscript>.
+Me llamo Óscar Triano García <span id="nacimiento" data-fechanacimiento="1987">y tengo (mmmm...) años<span><noscript> (usa JavaScript para calcular mi edad. Nací el 5 de Octubre de 1987)</noscript>.
 
 Mi interés por la informática empezó cuando quería hacer juegos desde pequeño. Con el tiempo
 me he ido interesando otras áreas de la informática como el diseño y desarrollo de máquinas virtuales, los lenguajes de programación en sí, la arquitectura de computadoras... Por lo general hago diseño y el desarrollo de aplicaciones informáticas. Me puedo defender en la administración de sistemas, sobre todo bajo Linux.
