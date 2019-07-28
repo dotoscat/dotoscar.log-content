@@ -1,5 +1,6 @@
-html {
+html, body {
     height: 100%;
+    overflow-y: hidden;
 }
 
 .navegacion{
@@ -29,10 +30,20 @@ html {
     padding: 0 !important;
 }
 
+.pegajoso {
+    position: sticky;
+    top: 32px;
+}
+
 #paginador {
     padding: 0;
     margin: 0;
     display: flex;
+}
+
+#contenido {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 article p, main p {
@@ -41,15 +52,22 @@ article p, main p {
 
 main {
     display: flex;
+    overflow-y: hidden;
 }
 
-/*main article {
+#desplazamiento {
+    height: 100%;
+    overflow-y: auto;
+}
+
+main section {
     padding: 1rem;
+    overflow-y: hidden;
     background-color: white;
     align-items: stretch;
     border-radius: 0.25rem;
     border: 1px solid #4d4dff;
-}*/
+}
 
 main a {
     color: #99f;
@@ -61,10 +79,6 @@ main a:active{
 
 main a:visited{
     color: #a64dff;
-}
-
-main section {
-    overflow-y: auto;
 }
 
 body {
@@ -86,14 +100,14 @@ header > h1 a {
 @media screen and (max-width: 59.999rem){
     main{
         margin: 1rem;
+        flex-wrap: wrap;
     }
 }
 
 @media screen and (min-width: 60rem){
-    main article, main section{
-        max-width: 60rem;
-        margin-left: auto;
-        margin-right: auto;
+
+    #contenido{
+        width: 60rem;
     }
     
     #menu-izquierdo{
