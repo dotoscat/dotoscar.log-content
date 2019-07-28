@@ -1,6 +1,5 @@
 html {
     height: 100%;
-    overflow-y: hidden;
 }
 
 .navegacion{
@@ -41,14 +40,16 @@ article p, main p {
 }
 
 main {
+    display: flex;
+}
+
+/*main article {
     padding: 1rem;
     background-color: white;
-    overflow-y: hidden;
-    height: 100%;
     align-items: stretch;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     border: 1px solid #4d4dff;
-}
+}*/
 
 main a {
     color: #99f;
@@ -63,7 +64,6 @@ main a:visited{
 }
 
 main section {
-    height: 100%;
     overflow-y: auto;
 }
 
@@ -83,17 +83,22 @@ header > h1 a {
     color: #222;
 }
 
-@media screen and (max-width: 60rem){
+@media screen and (max-width: 59.999rem){
     main{
         margin: 1rem;
     }
 }
 
 @media screen and (min-width: 60rem){
-    main{
-        width: 60rem;
+    main article, main section{
+        max-width: 60rem;
         margin-left: auto;
         margin-right: auto;
+    }
+    
+    #menu-izquierdo{
+        flex-shrink: 0;
+        min-width: 12%;
     }
 }
 

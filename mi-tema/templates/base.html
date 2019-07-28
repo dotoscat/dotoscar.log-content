@@ -14,25 +14,45 @@
     <body>
         <header>
         <h1 class="centrar"><a href="/">{{ SITENAME }}</a></h1>
-        <nav class="navegacion">
+        <nav id="paginas" class="navegacion">
             <ul>
                 {% for apage in pages %}
-                    <li><a class="boton {% if page == apage%}activo{% endif %}" href="/{{ apage.url }}">{{ apage.title }}</a></li>
+                <li><a class="boton {% if page == apage%}activo{% endif %}" href="/{{ apage.url }}">{{ apage.title }}</a></li>
                 {% endfor %}
-                {% for acategoria, null in categories %}
-                    <li><a class="boton {% if category == acategoria%}activo{% endif %}" href="/{{ acategoria.url }}">{{ acategoria }}</a></li>
-                {% endfor %}
-                {% block paginador %}
-                {% endblock %}
             </ul>
         </nav>
         </header>
         <main>
+            <aside id="menu-izquierdo">
+                <h2>Categorías</h2>
+                <nav id="categorias">
+                    <ul>
+                    {% for acategoria, null in categories %}
+                    <li><a class="{% if category == acategoria%}activo{% endif %}" href="/{{ acategoria.url }}">{{ acategoria }}</a></li>
+                    {% endfor %}
+                    </ul>
+                </nav>
+                <h2>Archivo</h2>
+                <nav>
+                    <ul>
+                        <li>Hola 1</li>
+                        <li>Hola 2</li>
+                    </ul>
+                </nav>
+            </aside>
             <section>
-            {% block contenido %}
+                <div id="">
+                {% block contenido %}
                 <h1>¡Hola mundo! No olvides cambiar esto en la plantilla que hereda la plantilla base.</h1>
-            {% endblock %}
+                {% endblock %}
+                </div>
             </section>
+            <nav id="paginador" class="navegacion">
+                <ul>
+                    {% block paginador %}
+                    {% endblock %}
+                </ul>
+            </nav>
         </main>
         <footer style="font-size: xx-small">
             <p>Este sitio es generado con <a href="https://docs.getpelican.com/en/stable/">Pelican.</a></p>
