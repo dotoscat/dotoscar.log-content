@@ -98,8 +98,18 @@ header > h1 a {
 }
 
 @media screen and (max-width: 59.999rem){
+    header h1{
+        font-size: small;
+    }
+    #menu-izquierdo{
+        display: flex;
+        flex-direction: row;
+    }
+    #paginas{
+        font-size: smaller;
+    }
     main{
-        margin: 1rem;
+        margin: 0rem;
         flex-wrap: wrap;
     }
 }

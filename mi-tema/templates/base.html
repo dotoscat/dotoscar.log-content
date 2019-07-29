@@ -24,16 +24,16 @@
         </header>
         <main>
             <aside id="menu-izquierdo">
-                <h2>Categorías</h2>
                 <nav id="categorias">
+                    <h2>Categorías</h2>
                     <ul>
                     {% for acategoria, null in categories %}
                     <li><a class="{% if category == acategoria%}activo{% endif %}" href="/{{ acategoria.url }}">{{ acategoria }}</a></li>
                     {% endfor %}
                     </ul>
                 </nav>
-                <h2>Archivo</h2>
-                <nav>
+                <nav id="archivo">
+                    <h2>Archivo</h2>
                     <ul>
                         <li>Hola 1</li>
                         <li>Hola 2</li>
