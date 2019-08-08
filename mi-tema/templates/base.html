@@ -13,17 +13,17 @@
     </head>
     <body>
         <header>
-        <h1 class="centrar"><a href="/">{{ SITENAME }}</a></h1>
-        <nav id="paginas" class="navegacion">
+            <h1 class="centrar"><a href="/">{{ SITENAME }}</a></h1>
+        </header>
+        <nav id="paginas" class="sticky-nav navegacion">
             <ul>
                 {% for apage in pages %}
                 <li><a class="boton {% if page == apage%}activo{% endif %}" href="/{{ apage.url }}">{{ apage.title }}</a></li>
                 {% endfor %}
             </ul>
         </nav>
-        </header>
         <main>
-            <aside id="menu-izquierdo">
+            <aside id="menu">
                 <nav id="categorias">
                     <h2>Categorías</h2>
                     <ul>
@@ -40,7 +40,7 @@
                     </ul>
                 </nav>
             </aside>
-            <section id="contenido">
+            <section id="contenido" class="lectura">
                 <div id="desplazamiento">
                 {% block contenido %}
                 <h1>¡Hola mundo! No olvides cambiar esto en la plantilla que hereda la plantilla base.</h1>
