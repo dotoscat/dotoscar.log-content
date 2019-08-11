@@ -1,5 +1,5 @@
 title: Hola mundo
-date: 4/7/2019
+date: 2019-7-4
 
 # Hola mundo
 
