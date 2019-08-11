@@ -1,10 +1,11 @@
 title: Golang sin fallos en los map
 date: 2019-8-11
+category: Backend
 
 Mientras estaba haciendo el tour para aprender Golang me encontré con un ejercicio para practicar
 map. Tenía que completar una función *WordCount* para que pasara las pruebas.
 
-Mi primera solución a este problema, que funcionó, fué este.
+Mi primera solución a este problema fué este
 
     func WordCount(s string) map[string]int {
         var words map[string]int = make(map[string]int)
