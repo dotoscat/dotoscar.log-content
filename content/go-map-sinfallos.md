@@ -1,5 +1,5 @@
 title: Golang sin fallos en los map
-date: 2019-8-11
+date: 2019-8-12
 category: Backend
 
 Mientras estaba haciendo el tour para aprender Golang me encontré con un ejercicio para practicar
