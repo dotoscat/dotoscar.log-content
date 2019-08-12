@@ -1,4 +1,11 @@
 {% extends 'base.html '%}
+{% block meta %}
+    {{ super() }}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="https://dotoscat.github.io" />
+    <meta name="twitter:title" content="{{ article.title }}" />
+    <meta name="twitter:description" content="{{ article.summary|escape }}" />
+{% endblock %}
 {% block contenido %}
     <article>
         <header>
