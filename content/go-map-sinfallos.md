@@ -3,7 +3,7 @@ date: 2019-8-12
 category: Backend
 
 Mientras estaba haciendo el tour para aprender Golang me encontré con un ejercicio para practicar
-map. Tenía que completar una función *WordCount* para que pasara las pruebas.
+map contando el número de palabras que aparecen en una cadena. Tenía que completar una función *WordCount* para que pasara las pruebas.
 
 Mi primera solución a este problema fué este
 
