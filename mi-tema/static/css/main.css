@@ -6,6 +6,11 @@ body {
     margin: 0;
 }
 
+pre, code{
+    background-color: black;
+    color: lightgrey;
+}
+
 pre{
     overflow-x: auto;
 }
