@@ -1,6 +1,6 @@
 title: Revisita a los palindromos
 category: Programación
-date: 2019-9-7
+date: 2019-9-8
 script: es-palindromo.js
 
 Hace tiempo hice de práctica con haskell una función que determinaba si una palabra era palíndroma o no.
