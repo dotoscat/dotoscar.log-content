@@ -1,4 +1,9 @@
 {% extends 'base.html '%}
+{% block scripts %}
+    {% if article.metadata.script is defined %}
+    <script src="/theme/js/{{ article.metadata.script }}"></script>
+    {% endif %}
+{% endblock %}
 {% block meta %}
     {{ super() }}
     <meta name="twitter:card" content="summary" />
