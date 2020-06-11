@@ -3,7 +3,7 @@ title= Contacto
 
 Puedes...
 
-* [Enviarme un email](mailto:contacto@contacto@oscartrigarmatica.com) a *contacto at oscartrigamatica dot com*.
+* Enviarme un email a *dotoscat (at) gmail (dot) com*.
 * Ver o seguirme en [twitter](https://twitter.com/cat_dotoscat)
     <a href="https://twitter.com/intent/tweet?screen_name=cat_dotoscat&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-text="¡Hola! ..." data-lang="es" data-show-count="false">Tweet to @cat_dotoscat</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 * [Ver mi perfil de linkedin](https://in.linkedin.com/in/oscar-triano-g7)

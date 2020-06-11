@@ -19,6 +19,14 @@ footer {
 
 article {
     background-color: aliceblue;
-    border: thin solid lightblue;
+    border-top: thin solid lightblue;
+    border-bottom: thin solid lightblue;
     padding: 1rem;
+}
+
+@media (min-width: 60rem) {
+    article {
+        border-left: thin solid lightblue;
+        border-right: thin solid lightblue;
+    }
 }
