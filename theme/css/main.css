@@ -5,7 +5,8 @@ body {
     background-color: azure;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    max-width: 60rem;
+    line-height: 1.4rem;
 }
 
 header h1, section nav {
@@ -14,4 +15,10 @@ header h1, section nav {
 
 footer {
     font-size: small;
+}
+
+article {
+    background-color: aliceblue;
+    border: thin solid lightblue;
+    padding: 1rem;
 }
