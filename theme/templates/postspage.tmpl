@@ -1,0 +1,25 @@
+{{ template "basic.tmpl" }}
+{{ block "content" . }}
+    <section>
+        <ul>
+        {{ range .Posts }}
+            <li>
+                <a href="{{ .URL }}">{{ .Date }} - {{ .Name }}</a>
+            </li>
+        {{ end }}
+        </ul>
+        <nav>
+            {{ if .Prev }}
+                <a href="{{ .Prev.URL }}">Prev</a>
+            {{ else if and (not .Prev) .Next }}
+                <span>First</span>
+            {{ end }}
+             | 
+            {{ if .Next}}
+                <a href="{{ .Next.URL }}">Next</a>
+            {{ else if and .Prev (not .Next) }}
+                <span>End</span>
+            {{ end }}
+        </nav>
+    </section>
+{{ end }}

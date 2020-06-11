@@ -1,6 +1,7 @@
-title: Golang sin fallos en los map
-date: 2019-8-12
-category: Backend
+title = Golang sin fallos en los map
+date = 2019-8-12
+category = Backend
+---
 
 Mientras estaba haciendo el tour para aprender Golang me encontré con un ejercicio para practicar
 map contando el número de palabras que aparecen en una cadena. Tenía que completar una función *WordCount* para que pasara las pruebas.

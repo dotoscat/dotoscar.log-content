@@ -62,4 +62,4 @@ Pues esto está listo
 
 <input id="palabra" type="text" min="0" max="64" /> <span id="esnoes">es</span> palíndroma.
 
-[El código fuente en JavaScript]({static}theme/js/es-palindromo.js)
+[El código fuente en JavaScript]({attach}theme/js/es-palindromo.js)
