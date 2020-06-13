@@ -15,6 +15,7 @@
             <h1><a href="/">{{.Title}}</a></h1>
             <nav>
                 <ul>
+                    <li><a href="/">Principal</a></li>
                     {{ range .Pages }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>
                     {{ end }}
                 </ul>
