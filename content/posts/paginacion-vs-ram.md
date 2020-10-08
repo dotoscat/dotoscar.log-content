@@ -14,13 +14,13 @@ No solamente eso, sino que además los administradores tenían su ordenador todo
 
 ## Solución
 
-¿Solución? Se compraron ordenadores nuevos, con más RAM. Si bien esto solucionaba el problema temporalmente no lo hacía con la carga, y con respecto a la RAM solamente daban una patada al problema que se haría mas grande después. Entre que se pensaba comprar mas RAM u otros ordenadores con mas RAM y soluciones software como concurrencia (??) no iba a resolver el problema. Sobre la concurrencia no resolvería el problema porque el problema era en el lado del cliente con respecto a la carga, no importa cuántas manos haya para pillar datos, al final estás sobrecargando el navegador con la acumulación de todos esos datos.
+¿Solución? Se compraron ordenadores nuevos, con más RAM. Si bien esto solucionaba el problema temporalmente no lo hacía con la carga, y con respecto a la RAM solamente daban una patada al problema que se haría mas grande después. Las solucines que habían era comprar mas RAM u otros ordenadores con mas RAM y soluciones software como concurrencia. Sobre la concurrencia no resolvería el problema porque el problema era en el lado del cliente con respecto a la carga, no importa cuántas manos haya para pillar datos, al final estás sobrecargando el navegador con la acumulación de todos esos datos.
 
 La solución era mucho más sencilla que todo lo de arriba, y más barato, y es usar una técnica que usan muchos frameworks web como [Django](https://github.com/django/django/blob/0a306f7da668e53af2516bfad759b52d6c650b69/django/core/paginator.py) o [Laravel](https://laravel.com/docs/8.x/pagination): paginar los datos.
 
-Paginar consiste en pedir y mostrar una parte de todos los datos mientras mantienes referencias a esas otras partes para igualmente pedirlas y mostrarlas. Todo esto se hace desde lado del servidor, al final el lado cliente reciba la parte ya procesada.
+Paginar consiste en pedir y mostrar una parte de todos los datos mientras mantienes referencias a esas otras partes para igualmente pedirlas y mostrarlas. Todo esto se hace desde lado del servidor para que al final el lado cliente reciba la parte ya procesada.
 
-La web de la empresa no usaba ningún framework, nada recomendable para un proyecto grande y crítico. Así que tocaba hacer uno a mano. Lo hice de esta forma:
+La web de la empresa no usaba ningún framework, nada recomendable para un proyecto grande y crítico. Así que tocaba hacer uno a mano. Se hizo de esta forma:
 
 1. Calcular el total del número de entradas de la petición
 
@@ -44,6 +44,6 @@ Finalmente con `$entradas_de_la_pagina` lo pasamos a la vista.
 
 Contar el número de registros de una tabla a través de un gestor de base de datos a pesar de ser lineal es mucho mas eficiente que hacerlo con un lenguaje de programación en el servidor.
 
-Tras implementar esta solución los administradores y los clientes de empresa dentro de lo que caben se han quedado mas contentos y la página no tarda minutos en cargarse. El tiempo de carga y uso de RAM es mas o menos constante de unos segundos.
+Tras implementar esta solución los administradores y los clientes de empresa dentro de lo que caben se han quedado mas contentos y la página no tarda minutos en cargarse. El tiempo de carga es mas o menos constante de unos segundos y el uso de RAM no se dispara.
 
 Siempre es mejor tirar de la solución mas sencilla y barata que complicarse. Gracias por leer.

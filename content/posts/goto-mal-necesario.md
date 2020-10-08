@@ -52,7 +52,7 @@ Y ahora usando *for*
     // fin
 
 
-En el segundo ejemplo que usar *for* es mucho mas claro porque muestra la intención que es iterar mientras se cumpla la condición,
+En el segundo ejemplo usar *for* es mucho mas claro porque muestra la intención que es iterar mientras se cumpla la condición,
 mientras que en el primero tienes que hacer un esfuerzo mental extra para saber qué se pretende hacer que este caso
 es lo mismo que en el segundo.
 
