@@ -36,14 +36,14 @@ La web de la empresa no usaba ningún framework, nada recomendable para un proye
             $total_paginas++
         }
 
-4. Ahora en la consulta, un SELECT por ejemplo, según el número de página hay que poner los límites.
+4. Ahora en la consulta según el número de página actual hay que poner los límites.
 
         $entradas_de_la_pagina <= SELECT NOMBRE, APELLIDOS FROM Algo LIMIT $entradas_por_pagina OFFSET $entradas_por_pagina*$pagina_actual
 
 Finalmente con `$entradas_de_la_pagina` lo pasamos a la vista.
 
-Contar el número de registros de una tabla a través de un gestor de base de datos a pesar de ser lineal es mucho mas eficiente que hacerlo con un lenguaje de programación en el servidor.
+Contar el número de registros de una tabla a a través de un gestor de base de datos con una consulta a pesar de ser lineal es mucho mas eficiente que hacerlo con un lenguaje de programación en el servidor.
 
-Tras implementar esta solución los administradores y los clientes de empresa dentro de lo que caben se han quedado mas contentos y la página no tarda minutos en cargarse. El tiempo de carga es mas o menos constante de unos segundos y el uso de RAM no se dispara.
+Tras implementar esta solución los administradores y los clientes de empresa dentro de lo que caben se han quedado contentos y la página no tarda minutos en cargarse. El tiempo de carga es mas o menos constante de unos segundos y el uso de RAM no se dispara.
 
 Siempre es mejor tirar de la solución mas sencilla y barata que complicarse. Gracias por leer.
