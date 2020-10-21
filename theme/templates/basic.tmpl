@@ -15,8 +15,10 @@
             <h1><a href="/">{{.Title}}</a></h1>
             <nav>
                 <ul>
-                    <li><a href="/">Principal</a></li>
-                    {{ range .Pages }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    <li {{ if eq .URL "/" "/index.html" }}class="selected"{{ end }}><a href="/"}>Principal</a></li>
+                    {{ $pageURL := .URL}}
+                    {{ range .Pages }}
+                    <li {{ if eq $pageURL .URL }}class="selected"{{ end }}><a href="{{ .URL }}">{{ .Name }}</a></li>
                     {{ end }}
                 </ul>
             </nav>

@@ -18,7 +18,7 @@
         <nav id="paginas" class="sticky-nav navegacion">
             <ul>
                 {% for apage in pages %}
-                <li><a class="boton {% if page == apage%}activo{% endif %}" href="/{{ apage.url }}">{{ apage.title }}</a></li>
+                <li><a class="boton" href="/{{ apage.url }}">{{ apage.title }}</a></li>
                 {% endfor %}
             </ul>
         </nav>
